@@ -1,22 +1,8 @@
 FROM nginx/unit:1.17.0-minimal
 
-RUN printf '\
-        {                                                           \n\
-            "listeners": {                                          \n\
-                "*:8000": {                                         \n\
-                    "pass": "routes"                                \n\
-                }                                                   \n\
-            },                                                      \n\
-            "routes": [                                             \n\
-                {                                                   \n\
-                    "action": {                                     \n\
-                        "share": "/app"                             \n\
-                    }                                               \n\
-                }                                                   \n\
-            ]                                                       \n\
-        }                                                           \n\
-    ' > /var/lib/unit/conf.json \
-    && mkdir -p /var/lib/unit/certs \
+ADD unit.conf.json /var/lib/unit/conf.json
+
+RUN mkdir -p /var/lib/unit/certs \
     && mkdir -p /var/run/unit && chmod go+wrX /var/run/unit \
     \
     && mkdir /app \
