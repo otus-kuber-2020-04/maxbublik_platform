@@ -1,7 +1,7 @@
 FROM nginx/unit:1.18.0-minimal
 
-# Нужно только для того, чтобы запустить ps aux
-RUN apt-get update --allow-insecure-repositories && apt-get install -y procps
+# Чтобы увидеть запущенные процессы, выполнить команду `kubectl exec web -- busybox ps`
+COPY --from=busybox:1.28 /bin/busybox /bin/busybox
 
 ADD unit.conf.json /var/lib/unit/conf.json
 
