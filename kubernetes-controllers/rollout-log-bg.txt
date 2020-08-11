@@ -1,0 +1,19 @@
+paymentservice-66cc87cffb-b6w27   0/1     Pending               v2
+paymentservice-66cc87cffb-6g6qd   0/1     Pending               v2
+paymentservice-66cc87cffb-stkm7   0/1     Pending               v2
+paymentservice-66cc87cffb-b6w27   0/1     ContainerCreating     v2
+paymentservice-66cc87cffb-6g6qd   0/1     ContainerCreating     v2
+paymentservice-66cc87cffb-stkm7   0/1     ContainerCreating     v2
+
+paymentservice-66cc87cffb-b6w27   1/1     Running               v2
+paymentservice-859d7cb97-vxqb5    1/1     Terminating           v1
+
+paymentservice-66cc87cffb-6g6qd   1/1     Running               v2
+paymentservice-859d7cb97-nb52c    1/1     Terminating           v1
+
+paymentservice-66cc87cffb-stkm7   1/1     Running               v2
+paymentservice-859d7cb97-6j55p    1/1     Terminating           v1
+
+paymentservice-859d7cb97-vxqb5    0/1     Terminating           v1
+paymentservice-859d7cb97-nb52c    0/1     Terminating           v1
+paymentservice-859d7cb97-6j55p    0/1     Terminating           v1
